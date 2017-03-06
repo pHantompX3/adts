@@ -7,21 +7,22 @@ using namespace std;
 
 class List //begin List definition 
 {
-  private:
-    class Node;//forward declaration (defined in the implementation file)
+	private:
+		class Node;//forward declaration (defined in the implementation file)
     
-    Node* frontPtr = nullptr;
-    int num_elements = 0;
+		Node* frontPtr = nullptr;
+		int num_elements = 0;
     
-  public:
-     ~List();//destructor
-     void insert(int element, int k);//insert element at location k
-     void remove(int k);//remove element at location k
-     int size();//return the number of elements in the List
+	public:
+		~List();//destructor
+		void insert(int element, int k);//insert element at location k
+		void remove(int k);//remove element at location k
+		int size();//return the number of elements in the List
+		void display(); // display List
+		void clear(); // make list empty
      
-     
-     /** MISSING OPERATIONS */
-     //... fill in ....
+/** MISSING OPERATIONS */
+//... fill in ....
 
 };//end List definition
 

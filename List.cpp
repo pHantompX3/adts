@@ -63,7 +63,7 @@ void List::remove(int k)
 {
 	if (k < 1 or k > num_elements)//if the location is invalid 
 	     throw out_of_range("List::removeAt(...)");//throw an "out_of_range" exception
-	
+	// try to make the exception more comprehensive
 	Node* delPtr;
 	
 	if(k == 1)
@@ -93,3 +93,34 @@ void List::remove(int k)
 	
 	//Implementations of missing operations
 	
+
+int List::display()
+{
+	for(Node*currptr = frontptr; currptr != nullptr; currptr = currptr -> link)
+		cout << currptr -> data << " ";
+}
+
+int List::getAt(int k)// return element at a position
+{
+
+	for (int loc = 1; loc != k; loc++)
+	{
+		currptr = currptr -> link;
+	}
+	
+	return currptr -> data;
+}
+
+void List::clear ()//clear
+{
+	while (numElements != 0)
+	{
+		int x = remove(1);
+	}
+}
+
+
+
+
+
+
