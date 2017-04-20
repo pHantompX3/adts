@@ -94,14 +94,15 @@ void List::remove(int k)
 	//Implementations of missing operations
 	
 
-int List::display()
+void List::display()
 {
-	for(Node*currptr = frontptr; currptr != nullptr; currptr = currptr -> link)
+	for(Node*currptr = frontPtr; currptr != nullptr; currptr = currptr -> link)
 		cout << currptr -> data << " ";
 }
 
 int List::getAt(int k)// return element at a position
 {
+	Node*currptr = frontPtr;
 
 	for (int loc = 1; loc != k; loc++)
 	{
@@ -113,9 +114,9 @@ int List::getAt(int k)// return element at a position
 
 void List::clear ()//clear
 {
-	while (numElements != 0)
+	while (num_elements != 0)
 	{
-		int x = remove(1);
+		remove(1);
 	}
 }
 
